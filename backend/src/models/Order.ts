@@ -11,7 +11,7 @@ export enum Borough {
   BROOKLYN = 'BROOKLYN',
   QUEENS = 'QUEENS',
   BRONX = 'BRONX',
-  STATEN_ISLAND = 'STATEN_ISLAND'
+  STATEN_ISLAND = 'STATEN ISLAND'
 }
 
 export interface IOrder extends Document {

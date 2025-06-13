@@ -52,7 +52,7 @@ const NavbarHeader: React.FC = () => {
               textShadow: '0 2px 8px rgba(25, 118, 210, 0.15)'
             }}
           >
-            Dashbaord
+            Dashboard
           </Typography>
         </Box>
         <Box sx={{ display: 'flex', gap: 1 }}>

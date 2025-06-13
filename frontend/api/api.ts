@@ -30,16 +30,6 @@ export const getOrders = async (borough?: Borough): Promise<Order[]> => {
 };
 
 /**
- * Create a new order
- */
-export const createOrder = async (
-  order: Omit<Order, "_id" | "createdAt" | "status">
-): Promise<Order> => {
-  const response = await api.post("/orders", order);
-  return response.data as Order;
-};
-
-/**
  * Update the status of an order
  */
 export const updateOrderStatus = async (
