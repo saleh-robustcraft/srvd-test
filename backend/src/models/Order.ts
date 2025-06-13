@@ -6,19 +6,11 @@ export enum OrderStatus {
   DELIVERED = 'DELIVERED'
 }
 
-export enum Borough {
-  MANHATTAN = 'MANHATTAN',
-  BROOKLYN = 'BROOKLYN',
-  QUEENS = 'QUEENS',
-  BRONX = 'BRONX',
-  STATEN_ISLAND = 'STATEN ISLAND'
-}
-
 export interface IOrder extends Document {
   customer: string;
   dispensary: string;
   status: OrderStatus;
-  borough: Borough;
+  borough: string; // Changed from Borough to string
   createdAt: Date;
 }
 
@@ -26,7 +18,7 @@ const OrderSchema: Schema = new Schema({
   customer: { type: String, required: true },
   dispensary: { type: String, required: true },
   status: { type: String, enum: Object.values(OrderStatus), default: OrderStatus.PLACED },
-  borough: { type: String, enum: Object.values(Borough) },
+  borough: { type: String }, // Removed enum constraint
   createdAt: { type: Date, default: Date.now }
 });
 

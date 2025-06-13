@@ -1,5 +1,5 @@
 import React from "react";
-import { Order, Borough } from "../../types";
+import { Order } from "../../types";
 import { useOrders } from "../../context/OrderContext";
 import {
   Box,
@@ -22,8 +22,8 @@ import EmptyState from './EmptyState';
 
 interface OrderTableProps {
   orders: Order[];
-  selectedBorough: Borough | "";
-  setSelectedBorough: (borough: Borough | "") => void;
+  selectedBorough: string;
+  setSelectedBorough: (borough: string) => void;
   optimize: () => Promise<void>;
   loading: boolean;
 }

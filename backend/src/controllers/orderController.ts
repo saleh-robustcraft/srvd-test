@@ -63,3 +63,12 @@ export const optimizeRoutes = async (req: Request, res: Response) => {
     res.status(500).json({ message: 'Server error' });
   }
 };
+
+export const getUniqueBoroughs = async (req: Request, res: Response) => {
+  try {
+    const boroughs = await Order.distinct('borough');
+    res.json(boroughs.filter(b => !!b));
+  } catch (err) {
+    res.status(500).json({ message: 'Server error' });
+  }
+};
