@@ -3,7 +3,7 @@
 ## Overview
 This project is a full-stack delivery management and route optimization system for dispensary orders. It features a modern admin dashboard, simulated route batching, and a modular codebase for easy extension. The stack includes:
 - **Backend:** Node.js, Express, MongoDB (Mongoose)
-- **Frontend:** Next.js (React), TypeScript, Tailwind CSS
+- **Frontend:** Next.js (React), TypeScript, Tailwind CSS, MUI Library
 
 ---
 
@@ -99,8 +99,7 @@ This project is a full-stack delivery management and route optimization system f
 - **`utils/ui.tsx`**: UI utility functions/components
 
 ### 7. Styling
-- **Tailwind CSS**: Utility-first CSS framework for rapid UI development
-  - `globals.css`, `tailwind.config.js`, etc.
+- **MUI Library**: Utility-first MUI Library for rapid UI development
 
 ### 8. Environment & Scripts
 - **`.env.local`**: Set `NEXT_PUBLIC_API_URL` to backend base URL
