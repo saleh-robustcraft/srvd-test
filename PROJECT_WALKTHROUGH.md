@@ -56,7 +56,6 @@ This project is a full-stack delivery management and route optimization system f
 ### 1. API Layer
 - **`api/api.ts`**: Centralized Axios client for backend API. Exports:
   - `getOrders(borough?)`: Fetches all or borough-filtered orders
-  - `createOrder(order)`: Creates a new order
   - `updateOrderStatus(id, status)`: Updates order status
   - `optimizeRoutes()`: Fetches optimized batches from backend
 
