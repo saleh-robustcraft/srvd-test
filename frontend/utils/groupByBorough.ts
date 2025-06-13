@@ -1,7 +1,7 @@
 // utils/groupByBorough.ts
-import { Order, Borough } from '../types';
+import { Order } from '../types';
 
-export type OrdersByBorough = Record<Borough, Order[]>;
+export type OrdersByBorough = Record<string, Order[]>;
 
 /**
  * Groups an array of orders by their borough.
@@ -15,11 +15,5 @@ export function groupOrdersByBorough(orders: Order[]): OrdersByBorough {
     }
     acc[order.borough].push(order);
     return acc;
-  }, {
-    MANHATTAN: [],
-    BROOKLYN: [],
-    QUEENS: [],
-    BRONX: [],
-    STATEN_ISLAND: []
-  } as OrdersByBorough);
+  }, {} as OrdersByBorough);
 }

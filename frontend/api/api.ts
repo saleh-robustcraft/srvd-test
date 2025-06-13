@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Order, OrderStatus, Borough, Batch } from "../types";
+import { Order, OrderStatus, Batch } from "../types";
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
@@ -22,21 +22,11 @@ api.interceptors.response.use(
 /**
  * Fetch orders, optionally filtered by borough
  */
-export const getOrders = async (borough?: Borough): Promise<Order[]> => {
+export const getOrders = async (borough?: string): Promise<Order[]> => {
   const response = await api.get("/orders", {
     params: borough ? { borough } : {},
   });
   return response.data as Order[];
-};
-
-/**
- * Create a new order
- */
-export const createOrder = async (
-  order: Omit<Order, "_id" | "createdAt" | "status">
-): Promise<Order> => {
-  const response = await api.post("/orders", order);
-  return response.data as Order;
 };
 
 /**
@@ -55,4 +45,22 @@ export const updateOrderStatus = async (
 export const optimizeRoutes = async (): Promise<{ batches: Batch[] }> => {
   const response = await api.get("/orders/optimize");
   return response.data as { batches: Batch[] };
+};
+
+/**
+ * Create a new order
+ */
+export const createOrder = async (
+  order: Omit<Order, "_id" | "createdAt" | "status">
+): Promise<Order> => {
+  const response = await api.post("/orders", order);
+  return response.data as Order;
+};
+
+/**
+ * Fetch all unique boroughs
+ */
+export const getBoroughs = async (): Promise<string[]> => {
+  const response = await api.get("/orders/boroughs");
+  return response.data as string[];
 };

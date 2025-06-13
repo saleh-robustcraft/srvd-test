@@ -3,7 +3,7 @@ export interface Order {
   customer: string;
   dispensary: string;
   status: OrderStatus;
-  borough: Borough;
+  borough: string; // Changed from Borough to string
   createdAt: string;
 }
 
@@ -13,13 +13,6 @@ export enum OrderStatus {
   DELIVERED = "DELIVERED",
   CANCELLED = "CANCELLED",
 }
-
-export type Borough =
-  | "MANHATTAN"
-  | "BROOKLYN"
-  | "QUEENS"
-  | "BRONX"
-  | "STATEN_ISLAND";
 
 export interface Batch {
   id: string;
