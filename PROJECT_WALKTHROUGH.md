@@ -63,13 +63,12 @@ This project is a full-stack delivery management and route optimization system f
 - **`types/index.ts`**: Defines types/interfaces for `Order`, `OrderStatus`, `Borough`, `Batch`, etc. Used throughout the app for type safety.
 
 ### 3. App Pages (Next.js App Router)
-- **`app/admin/page.tsx`**: Entry point for admin dashboard (may redirect to `/admin/dashboard`).
+- **`app/admin/page.tsx`**: Redirect to `/admin/dashboard`).
 - **`app/admin/dashboard/page.tsx`**: Main dashboard UI:
   - Fetches and displays all open orders (status `PLACED`)
   - Integrates filter, table, and batch optimization components
   - Handles loading and empty states
 - **`app/admin/orders-grouped/page.tsx`**: (Optional) Displays orders grouped by borough
-- **`app/page.tsx`**: Landing page (if present)
 
 ### 4. Components
 - **Order Table & Display:**
