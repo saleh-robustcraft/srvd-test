@@ -15,7 +15,10 @@ export enum OrderStatus {
 }
 
 export interface Batch {
-  id: string;
-  orders: Order[];
-  optimizedRoute: string;
+  id?: string;
+  orders: Order[] | string[];
+  optimizedRoute?: string;
+  borough: string;
+  count: number;
+  assignment: string;
 }
