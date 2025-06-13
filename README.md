@@ -9,7 +9,7 @@ A full-stack application for managing cannabis delivery orders, featuring an adm
 ```
 srvd-test/
 ├── backend/   # Node.js + Express + MongoDB API
-├── frontend/  # Next.js + React + Tailwind CSS admin dashboard
+├── frontend/  # Next.js + React + MUI Library
 ├── LICENSE
 └── README.md
 ```
